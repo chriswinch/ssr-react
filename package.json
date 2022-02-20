@@ -1,0 +1,35 @@
+{
+  "name": "ssr-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "start": "npm run build:client && npm run build:server",
+    "build:client": "NODE_ENV=production webpack --config webpack.config.ts",
+    "build:server": "NODE_ENV=production ts-node index.ts",
+    "dev": "nodemon index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.11",
+    "@types/webpack": "^5.28.0",
+    "@types/webpack-env": "^1.16.3",
+    "ts-loader": "^9.2.6",
+    "ts-node": "^10.5.0",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-middleware": "^5.3.1",
+    "webpack-dev-server": "^4.7.4",
+    "webpack-dev-server-ssr": "^3.10.8",
+    "webpack-hot-middleware": "^2.25.1"
+  },
+  "dependencies": {
+    "express": "^4.17.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
