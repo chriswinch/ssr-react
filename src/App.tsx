@@ -1,14 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 
 const App  = () => {
     const [introText, setIntroText] = useState('Hello From Server');
 
     useEffect(() => {
-        setIntroText('Hello From Client');
+        setIntroText('Hello From Client!!');
     }, []);
 
     return (
-        <h1>{introText}</h1>
+        <Routes>
+            <Route path="/" element={<h1>{introText}</h1>} />
+        </Routes>
     )
 }
 
